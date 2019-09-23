@@ -1,0 +1,5 @@
+Hey guys so I have been using Node JS in order to stand up the webservers we are using for the project. Since we wanted to use C++
+to do the data interactions, I found this Node engine "V8" that could allow us to do that. Go ahead and check it out if you can, it's
+just another idea for us on how we can transfer data to the C++ program
+
+https://nodeaddons.com/c-processing-from-node-js/
