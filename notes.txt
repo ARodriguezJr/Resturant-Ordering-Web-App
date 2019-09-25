@@ -3,3 +3,6 @@ to do the data interactions, I found this Node engine "V8" that could allow us t
 just another idea for us on how we can transfer data to the C++ program
 
 https://nodeaddons.com/c-processing-from-node-js/
+
+If the code is changed from c++ to javascript. Here are some examples on js server and client.
+https://cs.lmu.edu/~ray/notes/jsnetexamples/
