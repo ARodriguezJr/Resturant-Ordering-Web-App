@@ -1,0 +1,4 @@
+GIT bash
+node.js = npm install node? 
+cmd = node test.js
+node module needed  = require('fs')
