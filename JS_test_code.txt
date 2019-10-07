@@ -1,0 +1,43 @@
+
+
+function loadMenuItems()
+{
+	var whileCounter; 
+	var eof;
+	var line; 
+
+	return menuItem newItem(fileItemName, 
+				fileManufacturerName, 
+				filePrice, 
+				fileWeight, 
+				fileTime, 
+				fileSeason, 
+				fileQuantity, 
+				fileInStock, 
+				fileFragile)
+}
+
+class menuItem {
+	constructor(
+			fileItemName, 
+			fileManufacturerName, 
+			filePrice, 
+			fileWeight, 
+			fileTime, 
+			fileSeason, 
+			fileQuantity, 
+			fileInStock, 
+			fileFragile) 
+		{
+			this.menuItemName	= fileItemName;
+			this.manufacturerName	= fileManufacturerName;
+			this.price		= filePrice;
+			this.unitWeight		= fileWeight;
+			this.makeTime		= fileTime;
+			this.season		= fileSeason;
+			this.quantity		= fileQuantity;
+			this.inStock		= fileInStock;
+			this.fragile		= fileFragile;
+		}//End constructor
+}//End class menuItem;
+
