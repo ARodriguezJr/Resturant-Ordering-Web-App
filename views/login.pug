@@ -1,0 +1,31 @@
+html
+    head
+        style
+            include ../styles.css
+    div(class="topbar")
+        div(class="icon")
+            h1 ResturSHOP
+        div(class="login")
+            p
+            input(
+                id="username"
+                type='text'
+                name='Username:'
+            )
+            input(
+                id="password"
+                type='text'
+                name='Password:'
+            )
+    div(class="navbar")
+        div(id="home-tab")
+            p Home
+        div(id="catalog-tab")
+            p Catalog
+        div(id="contact-tab")
+            p Contact Us
+    body
+        div(class="welcome-text")
+            p Welcome #{user.name}
+            p What would you like to order today?
+        

@@ -1,0 +1,14 @@
+h1{color: cadetblue; font-size: 30px;}
+
+.topbar{height: 75px;}
+.icon{float: left;}
+
+.login{float: right;}
+#username{color: red; display: block;}
+#password{color: blue; display: block;}
+
+.navbar{position: relative; background-color: gray; display: flex; justify-content: space-between;}
+#home-tab{display: inline-block; margin-left: 30; margin-right: 30;}
+#catalog-tab{display: inline-block; margin-left: 30; margin-right: 30;}
+#contact-tab{display: inline-block; margin-left: 30; margin-right: 30;}
+p{ color: red;}
