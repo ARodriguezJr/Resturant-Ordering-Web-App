@@ -1,0 +1,28 @@
+How to get Front End server up
+
+Install Git Bash (https://gitforwindows.org/) - You need git Bash, but git Desktop will come with it too
+
+Git Bash is similar to Linux CLI - change directory to the folder where you want the files to go into
+
+Get code from github:
+$ git clone https://github.com/ARodriguezJr/Resturant-Ordering-Web-App.git
+
+From there you should be able to do:
+$ node server.js
+
+If not, download nodeJS (https://nodejs.org/en/download/) - Pick the windows or MacOS installer and right Architecture (32 or 64)
+
+then try:
+$ node server.js
+
+If the console says something like "missing module node" or "missing module npm", do:
+
+Use the global Search Charm to search "Environment Variables" (In settings)
+Click "Edit system environment variables"
+Click "Environment Variables" in the dialog.
+In the "System Variables" box, search for Path and edit it to include C:\Program Files\nodejs. Make sure it is separated from any other paths by a ;.
+You will have to restart any currently-opened command prompts before it will take effect.
+
+server.js is the main file that boots up the server
+
+
