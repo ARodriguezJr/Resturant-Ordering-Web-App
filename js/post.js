@@ -1,8 +1,6 @@
 //const querystring = require('querystring');
 //const https = require('https');
 
-//let val = testPost;
-
 function testPrint(){
   document.write("Test PRINTING");
 }
@@ -15,7 +13,7 @@ function loadDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "/static/knife.txt", true);
+  xhttp.open("GET", "https://localhost:8080/static/testKnife.txt", true);
   xhttp.send();
 }
 

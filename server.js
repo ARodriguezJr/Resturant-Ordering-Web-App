@@ -4,10 +4,18 @@ var https = require('https')
 var path = require('path')
 //var io = require('socket.io')(https);
 var router = express.Router();
+var cors = require('cors')
 let app = express()
+
+app.use(cors())
 
 //var post = require('./js/post.js')
 
+/*app.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ }); */
 
 const pug = require('pug');
 
