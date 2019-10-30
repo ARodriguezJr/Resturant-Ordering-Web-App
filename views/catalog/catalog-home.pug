@@ -1,0 +1,17 @@
+extends ../base
+block sidebar
+    div(id="catalog-sidebar")
+        a(class="sidebar-link", href = "/catalog/catalog-home") Home
+        a(class="sidebar-link", href = "/catalog/dishes") Dishes
+        a(class="sidebar-link", href = "/catalog/silverware") Silverware
+        a(class="sidebar-link", href = "/catalog/disposables") Disposables
+        a(class="sidebar-link", href = "/catalog/record-keeping") Recordkeeping
+        a(class="sidebar-link", href = "/catalog/kitchen") Kitchen  
+block content
+    //- Change "content" to sidebar
+    div(id="catalog-home-info")
+        div(id="catalog-home-image")
+            img(src="/public/stockkitchen.jpg")
+        div(id="catalog-home-text")
+            h1 Welcome to the ResturSHOP Catalog!
+            p Please let us know if we can do anything else to make your shopping experience any more pleasant. We are incredibly open to feedback and strive to provide not only a wholsesale shopping interface, but a pleasant expereince as well.

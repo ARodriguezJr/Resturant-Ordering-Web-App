@@ -19,11 +19,22 @@ app.use(cors())
 
 const pug = require('pug');
 
+var indexManager = require("./managers/index");
+var catalogManager = require("./managers/catalog");
+var accountManager = require("./managers/account");
+
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/node_modules", express.static(__dirname + "/js"));
-app.use("/static", express.static(__dirname + "/static"));
+app.use("/public", express.static(__dirname + "/public"));
+app.use("/views", express.static(__dirname + "/views"));
+
+app.use("/", indexManager);
+app.use("/catalog", catalogManager);
+app.use("/account", accountManager);
 
 app.set("view engine", "pug");
+
+
 
 //app.use(express.static(__dirname + '/static'));
 //app.set("views", path.join(__dirname, "views"));
@@ -38,12 +49,12 @@ app.set("view engine", "pug");
 });*/
 
 app.get('/', function (req, res) {
-  res.render('homepage', {title: 'Homepage'});
-});
+  res.render('siteroot/index', {title: 'Homepage'});
+}); 
 
-router.get("/", (req, res) => {
+/*router.get("/", (req, res) => {
   res.render("homepage");
-});
+}); */
 
 https.createServer({
   key: fs.readFileSync('server.key'),

@@ -1,0 +1,32 @@
+html
+    head
+        style
+            include ../styles.css
+        block scripts
+            script(type="text/javascript", src="../js/post.js")
+            script(type="text/javascript", src="../js/login.js")
+            //script(src="/socket.io/socket.io.js")
+    body
+        block topbar
+            div(class="topbar")
+                div(class="icon")
+                    h1 ResturSHOP
+                div(class="login")
+                    form(name="loginForm", id="loginForm")
+                        input(type="text", name="username", id="username", class="login-form")
+                        input(type="password", name="login", id="password", class="login-form")
+                        button(type="button", onClick="submitLogin()") Login
+        block navigation
+            div(class="navbar")
+                a(id="home-tab", href="/")
+                    p Home
+                a(id="catalog-tab", href="/catalog/catalog-home")
+                    p Catalog
+                a(id="contact-tab", href="/connect")
+                    p Contact Us
+                a(id="My Account", href="/account/myAccount")
+                    p My Account
+            b
+        block sidebar
+        block content
+        block footer
