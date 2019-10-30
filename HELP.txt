@@ -25,4 +25,4 @@ You will have to restart any currently-opened command prompts before it will tak
 
 server.js is the main file that boots up the server
 
-
+Default Navbar Bolor: #c7ac7d
