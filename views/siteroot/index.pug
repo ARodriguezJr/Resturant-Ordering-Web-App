@@ -1,11 +1,18 @@
 extends ../base
 block sidebar
+    div(id="home-sidebar")
+        a(class="home-link", href = "/About") About
+        a(class="home-link", href = "/Offers") Offers
+        a(class="home-link", href = "/Reviews") Reviews
+        a(class="home-link", href = "/Careers") Careers
+
 block content
     div(class="welcome-text")
-        p Welcome NAME HERE
+        img(src="/public/stock_hot.jpg" class="home-image")
+        p Welcome Cutomer
         p What would you like to order today?
         div(id="demo")
-            h1  Initial Text
+            h1  Confirm Order
         button(id="testPing", onclick="loadDoc()") Send Data
             //-form(action="https://localhost:8080/", method="post")
                 input(type="text", name="testproduct")
