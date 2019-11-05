@@ -1,5 +1,9 @@
 extends catalog-home.pug
 block content
+    //- Runs script to load in all the items from backend
+    body(onload='loadItems()')     
+    div(id="demo")
+        p Test Text
     div(class="item-grid")
         div(class="item-tile")
             div(class="item-tile-photo")

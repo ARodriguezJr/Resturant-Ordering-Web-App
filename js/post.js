@@ -13,7 +13,7 @@ function loadDoc() {
       this.responseText;
     }
   };
-  xhttp.open("GET", "https://localhost:8080/static/testKnife.txt", true);
+  xhttp.open("GET", "https://localhost:8080/static/Knives.txt", true);
   xhttp.send();
 }
 
