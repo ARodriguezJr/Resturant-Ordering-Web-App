@@ -16,7 +16,7 @@ function loadItems(){
       var itemGrid = document.getElementById("item-grid");
       var itemCard = document.createElement("div");
       itemCard.className = "item-tile";
-      itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>";
+      itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
       //itemCard.innerHTML = <div class="item-tile-photo"><img src="icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"/></div><div class="item-tile-description"><h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>;
 
       /*itemCard.innerHTML = 
