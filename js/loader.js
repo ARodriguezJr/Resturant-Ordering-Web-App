@@ -13,10 +13,10 @@ function loadItems(){
       var itemPrice = itemRaw.slice(dollarIndex);
       
       document.getElementById("demo").innerHTML = itemName;
-
+      var itemGrid = document.getElementById("item-grid");
       var itemCard = document.createElement("div");
       itemCard.className = "item-tile";
-      itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'/>" +  "</div><div class='item-tile-description'>" + "<h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>";
+      itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>";
       //itemCard.innerHTML = <div class="item-tile-photo"><img src="icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"/></div><div class="item-tile-description"><h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>;
 
       /*itemCard.innerHTML = 
@@ -39,7 +39,7 @@ function loadItems(){
         name: itemName,
         price: itemPrice
       }*/
-      document.body.appendChild(itemCard); // Maybe use a different append fucntion here
+      itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
       //itemArray.push(item);
     }
   };
