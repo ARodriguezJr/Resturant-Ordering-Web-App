@@ -1,48 +1,112 @@
 // JS file to help laod dynamic info form backend for catalog
 
 function loadItems(){
-    var xhttp = new XMLHttpRequest();
+  var url =  window.location.href;
+  var xhttp = new XMLHttpRequest();
 
-    var itemArray = [];
+  if(url == "https://localhost:3000/catalog/dishes"){
+    var folder = "plates";
+    var fileNames = ["ceramic.txt", "dark_ceramic.txt"];
+  }else if(url == "https://localhost:3000/catalog/silverware"){
+    var folder = "silverware";
+    var fileNames = ["steel_forks.txt", "steel_knives.txt"];
+  }
 
+  // NOTES: Use url to make vars to hold parent folder name, array of file names, make descriptions in text files
+
+  /*if(url == "https://localhost:3000/catalog/dishes"){
     xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var itemRaw = this.responseText;      // Raw text file data
-      var dollarIndex = itemRaw.indexOf("$");
-      var itemName = itemRaw.slice(0, dollarIndex);
-      var itemPrice = itemRaw.slice(dollarIndex);
-      
-      document.getElementById("demo").innerHTML = itemName;
-      var itemGrid = document.getElementById("item-grid");
-      var itemCard = document.createElement("div");
-      itemCard.className = "item-tile";
-      itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
-      //itemCard.innerHTML = <div class="item-tile-photo"><img src="icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"/></div><div class="item-tile-description"><h1>White Ceramic</h1><p>Beautiful ceramic plates useful for any occaison </p></div>;
+      if (this.readyState == 4 && this.status == 200) {
+        var itemRaw = this.responseText;      // Raw text file data
+        var dollarIndex = itemRaw.indexOf("$");
+        var itemName = itemRaw.slice(0, dollarIndex);
+        var itemPrice = itemRaw.slice(dollarIndex);
+          
+        document.getElementById("demo").innerHTML = itemName;
+        var itemGrid = document.getElementById("item-grid");
+        var itemCard = document.createElement("div");
+        itemCard.className = "item-tile";
+        itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
+          
+        itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
+          // Scrapped array of items idea
+      }
+    };
+      xhttp.open("GET", "https://localhost:8080/static/plates/ceramic.txt", false);
+      xhttp.send();
+    
+      /*********************************************************
+      ********************SECOND ITEM***************************
+      **********************************************************/
+    
+      /*xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var itemRaw = this.responseText;      // Raw text file data
+          var dollarIndex = itemRaw.indexOf("$");
+          var itemName = itemRaw.slice(0, dollarIndex);
+          var itemPrice = itemRaw.slice(dollarIndex);
+            
+          document.getElementById("demo").innerHTML = itemName;
+          var itemGrid = document.getElementById("item-grid");
+          var itemCard = document.createElement("div");
+          itemCard.className = "item-tile";
+          itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
+            
+          itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
+            // Scrapped array of items idea
+        }
+      };
+        xhttp.open("GET", "https://localhost:8080/static/plates/dark_ceramic.txt", false);
+        xhttp.send();
 
-      /*itemCard.innerHTML = 
-      "<div class="item-tile">" +
-      "<div class="item-tile-photo">" +
-      "<img src="icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"/>" +
-      "</div><div class="item-tile-description">" +
-      "<h1>White Ceramic</h1>" +
-      "<p>Beautiful ceramic plates useful for any occaison </p>";*/
-      
-      /*** WORKING CODE UNDER HERE
-      itemCard.className = "item-tile";
-      // Add attributes and html to card 
-      itemCard.innerText = "CARD";
-      // append to list
-      document.body.appendChild(itemCard); // Maybe use a different append fucntion here
-      WORKING CODE ABOVE HERE
-      */ 
-      /*var item = {
-        name: itemName,
-        price: itemPrice
-      }*/
-      itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
-      //itemArray.push(item);
-    }
-  };
-  xhttp.open("GET", "https://localhost:8080/static/Knives.txt", true);
-  xhttp.send();
+
+
+
+  }else if(url == "https://localhost:3000/catalog/silverware"){
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var itemRaw = this.responseText;      // Raw text file data
+        var dollarIndex = itemRaw.indexOf("$");
+        var itemName = itemRaw.slice(0, dollarIndex);
+        var itemPrice = itemRaw.slice(dollarIndex);
+          
+        document.getElementById("demo").innerHTML = itemName;
+        var itemGrid = document.getElementById("item-grid");
+        var itemCard = document.createElement("div");
+        itemCard.className = "item-tile";
+        itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
+          
+        itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
+          // Scrapped array of items idea
+      }
+    };
+      xhttp.open("GET", "https://localhost:8080/static/silverware/steel_forks.txt", false);
+      xhttp.send();
+    
+      /*********************************************************
+      ********************SECOND ITEM***************************
+      **********************************************************/
+    
+      /*xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var itemRaw = this.responseText;      // Raw text file data
+          var dollarIndex = itemRaw.indexOf("$");
+          var itemName = itemRaw.slice(0, dollarIndex);
+          var itemPrice = itemRaw.slice(dollarIndex);
+            
+          document.getElementById("demo").innerHTML = itemName;
+          var itemGrid = document.getElementById("item-grid");
+          var itemCard = document.createElement("div");
+          itemCard.className = "item-tile";
+          itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
+            
+          itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
+            // Scrapped array of items idea
+        }
+      };
+        xhttp.open("GET", "https://localhost:8080/static/silverware/steel_knives.txt", false);
+        xhttp.send();
+}
+
+*/
 }
