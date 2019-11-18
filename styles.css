@@ -1,15 +1,17 @@
-body{background-color: gainsboro;}
+body{background-color: gainsboro; margin: 0px;}
 h1{color: black; font-size: 30px; font-family: 'Rubik', sans-serif;}
 img{width: 100%;}
 a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
 
-.topbar{height: 85px;}
+.topbar{height: 80px; background-color: #232f3e; width: 100%;}
+.topbar h1{color: slategray;}
 .icon{float: left;}
 
 .login{float: right;}
 .login-form {display: block;}
 
-.navbar{position: relative; background-color: #c7ac7d; display: flex; justify-content: space-evenly;}
+.navbar{position: relative; height: 50px; background-color: #232f3e; display: flex; justify-content: space-evenly;}
+.navbar p{color: slategray;}
 #home-tab{display: inline-block; margin-left: 30; margin-right: 30;}
 #catalog-tab{display: inline-block; margin-left: 30; margin-right: 30;}
 #contact-tab{display: inline-block; margin-left: 30; margin-right: 30;}
@@ -33,3 +35,8 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 
 .account-info {width: 450px; height: fit-content; border-style: solid; border-width: 2px;}
 .account-info .header {float: left;  width: 100%; border-bottom-style: solid; border-width: 2px;}
+
+#item-listing{margin-left: 286px;}
+#item-listing-photo{float: left; height: fit-content; width: 50%; position: relative;}
+#item-listing-sidespecs{float: right; width: 50%; position: relative;}
+#item-listing-description{position: relative; height: 200; width: 300;}

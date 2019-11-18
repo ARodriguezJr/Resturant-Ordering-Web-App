@@ -24,4 +24,25 @@ router.get("/record-keeping", (req, res) =>{
 router.get("/kitchen", (req, res) =>{
     res.render("catalog/items", {title: "Kitchen"});
 });
+
+/**********************************************
+ ***************ITEMS ROUTING******************
+ **********************************************/
+
+router.get("/ceramic", (req, res) =>{
+    res.render("catalog/item-listing", {title: "Ceramic Plates"});
+});
+
+router.get("/dark_ceramic", (req, res) =>{
+    res.render("catalog/item-listing", {title: "Dark Ceramic Plates"});
+});
+
+router.get("/steel_forks", (req, res) =>{
+    res.render("catalog/item-listing", {title: "Stainless Steel Forks"});
+});
+
+router.get("/steel_knives", (req, res) =>{
+    res.render("catalog/item-listing", {title: "Stainless Steel Knives"});
+});
+
 module.exports = router;

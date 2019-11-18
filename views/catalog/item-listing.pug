@@ -1,0 +1,28 @@
+extends catalog-home.pug
+block content
+    //- Runs script to load in all the items from backend
+    body(onload='loadListing()')     
+    div(id="demo")
+        p Unable to reach Backend for Listing!!
+    //- Change id name for clarity
+    //-div(id="item-listing")
+        div(id="item-listing-photo")
+            img(src="/public/plates.jpg")
+        div(id="item-listing-sidespecs")
+            ul
+                li Made of Titanium Carbon Alloy
+                li Durable under any stress, perfect for children
+                li Beautiful cermic finish
+                li Ornate crafted design on outer, upper lip of each plate
+                li 5th listing lol
+        div(id="item-listing-purchase")
+            p BUY ITEM BUTTON
+        div(id="item-listing-description")  
+            h1 White Ceramic
+            p Item Text Description here
+        //-div(class="item-tile")
+            div(class="item-tile-photo")
+                img(src="/public/plates.jpg")
+            div(class="item-tile-description")
+                h1 White Ceramic
+                p Beautiful ceramic plates useful for any occaison  
