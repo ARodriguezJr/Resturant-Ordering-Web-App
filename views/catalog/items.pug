@@ -1,31 +1,14 @@
 extends catalog-home.pug
 block content
-    div(class="item-grid")
-        div(class="item-tile")
-            div(class="item-tile-photo")
-                img(src="/public/plates.jpg")
-            div(class="item-tile-description")
-                h1 White Ceramic
-                p Beautiful ceramic plates useful for any occaison 
-        div(class="item-tile")
-            div(class="item-tile-photo")
-                img(src="/public/plates.jpg")
-            div(class="item-tile-description")
-                h1 White Ceramic
-                p Beautiful ceramic plates useful for any occaison 
-        div(class="item-tile")
-            div(class="item-tile-photo")
-                img(src="/public/plates.jpg")
-            div(class="item-tile-description")
-                h1 White Ceramic
-                p Beautiful ceramic plates useful for any occaison
-        div(class="item-tile")
+    //- Runs script to load in all the items from backend
+    body(onload='loadItems()')     
+    div(id="demo")
+        p Unable to reach Backend!!
+    div(id="item-grid")
+        //-div(class="item-tile")
             div(class="item-tile-photo")
                 img(src="/public/plates.jpg")
             div(class="item-tile-description")
                 h1 White Ceramic
                 p Beautiful ceramic plates useful for any occaison  
-            //-form(action="https://localhost:8080/", method="post")
-                input(type="text", name="testproduct")
-                input(type="submit", name="testping", value="Send Test Ping")
         
