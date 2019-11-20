@@ -9,6 +9,10 @@ a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
 .login{float: right;}
 .login-form {display: block;}
 
+.footer {position: relative; left: 0; bottom: 0; width: 100%; background-color: #c7ac7d; }
+.footer p{font-size: 15px;}
+.foot-link{font-size:15px; display:flex; justify-content: space-evenly;}
+
 .navbar{position: relative; background-color: #c7ac7d; display: flex; justify-content: space-evenly;}
 #home-tab{display: inline-block; margin-left: 30; margin-right: 30;}
 #catalog-tab{display: inline-block; margin-left: 30; margin-right: 30;}

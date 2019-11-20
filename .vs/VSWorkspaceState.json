@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\managers",
+    "\\public",
+    "\\views",
+    "\\views\\account",
+    "\\views\\catalog",
+    "\\views\\siteroot"
+  ],
+  "SelectedNode": "\\managers\\index.js",
+  "PreviewInSolutionExplorer": false
+}
