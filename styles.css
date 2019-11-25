@@ -38,5 +38,5 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 
 #item-listing{margin-left: 286px;}
 #item-listing-photo{float: left; height: fit-content; width: 50%; position: relative;}
-#item-listing-sidespecs{float: right; width: 50%; position: relative;}
-#item-listing-description{position: relative; height: 200; width: 300;}
+#item-listing-info{float: right; width: 50%;}
+#item-listing-description{position: relative; width: 300;}
