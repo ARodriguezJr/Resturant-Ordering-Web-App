@@ -86,6 +86,34 @@ function loadListing(){
 
 
 
+function loadOrders(){
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var orderRaw = this.responseText;      // Raw text file data
+      var hashIndex = orderRaw.indexOf("#");
+      var dollarIndex = orderRaw.indexOf("$");
+      var itemName = orderRaw.slice(0, hashIndex);
+      var itemQuantity = orderRaw.slice(++hashIndex, --dollarIndex);
+      var itemPrice = orderRaw.slice(dollarIndex + 2);
+      console.log(itemPrice);
+        
+      
+      var itemOrder = document.createElement("div");
+      var orderList = document.getElementById("orders-body")
+      itemOrder.setAttribute("class", "orders-single");
+      
+      itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/stock_hot.jpg" + "/><h2>" + itemName + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
+        
+      orderList.appendChild(itemOrder); 
+    }
+  };
+    xhttp.open("GET", "https://localhost:8080/orders/" + "adminorders.txt", false);   //Might need " at end of fileName here
+    xhttp.send();
+} 
+
+
 
 
 

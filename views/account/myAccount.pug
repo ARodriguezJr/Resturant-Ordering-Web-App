@@ -1,6 +1,7 @@
 extends ../base
 
 block content
+    body(onload='loadOrders()')
     div(class="account-info")
         div(class="header") Your Account
         div(id="main-info")
@@ -11,4 +12,15 @@ block content
         div(id="extra-info")
             p Associated Company: Super Mega Food Place
             p Membership: Premium
-        div(id="orders")
+    div(id="orders")
+        div(id="orders-header")
+            h1 Orders
+        div(id="orders-body")
+            div(class="orders-single")
+                div(class="orders-item")
+                    img(src="/public/stock_hot.jpg" class="orders-image")
+                    h2 Green Ceramic Plates
+                div(class="orders-quantity")
+                    p Quantity: 2
+                div(class="orders-price")
+                    h2 $700

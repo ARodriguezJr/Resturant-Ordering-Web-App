@@ -3,13 +3,14 @@ function submitQty(){
     // read url to see what was ordered
     var url =  window.location.href;
     var quantity = document.getElementById("orderQty").value;
+    var item = url.slice(31);
     
+    var itemPriceRawContent = document.getElementById("item-listing-price").textContent;
+    var itemPriceRaw = itemPriceRawContent.slice(1);
+    var itemPrice = parseInt(itemPriceRaw, 10);
 
-
-    // Maybe cut string to only last portion of url to decide what are th eparameters
-    item = url.slice(31);
     console.log("item: " + item);
-    var params = "item=" + item + "&quantity=" + quantity;
+    var params = "item=" + item + "&quantity=" + quantity + "&price=" + itemPrice;
 
     console.log(params);
 
