@@ -1,21 +1,22 @@
-body{background-color: gainsboro; margin: 0px;}
+html, body {height: 100%;min-height: 100%; margin: 0;padding: 0; border: 0;}
+body{background-color: white; margin: 0px;}
 h1{color: black; font-size: 30px; font-family: 'Rubik', sans-serif;}
 img{width: 100%;}
 a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
 
-.topbar{height: 80px; background-color: #232f3e; width: 100%;}
-.topbar h1{color: slategray;}
+.topbar{height: 80px; background-color: white; width: 100%;}
+.topbar h1{color: #232f3e;}
 .icon{float: left;}
 
 .login{float: right;}
 .login-form {display: block;}
 
-.footer {position: relative; left: 0; bottom: 0; width: 100%; background-color: #c7ac7d; }
-.footer p{font-size: 15px;}
-.foot-link{font-size:15px; display:flex; justify-content: space-evenly;}
+.footer {position:fixed;left: 0; bottom: 0; width: 100%; padding: 5px; background-color: #232f3e; }
+.foot-link{justify-content: space-evenly; color:white;  float: left; display: block; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 15px;}
+.foot-info{font-size: 15px; color: white; float: right; display: block; text-align: center; padding: 14px 16px; text-decoration: none; justify-content:space-evenly;}
 
 .navbar{position: relative; height: 50px; background-color: #232f3e; display: flex; justify-content: space-evenly;}
-.navbar p{color: slategray;}
+.navbar p{color: white;}
 
 #home-tab{display: inline-block; margin-left: 30; margin-right: 30;}
 #catalog-tab{display: inline-block; margin-left: 30; margin-right: 30;}
@@ -23,16 +24,16 @@ a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
 p{color: black; font-family: 'Rubik', sans-serif;}
 
 #home-sidebar{width: 280px; position: fixed; z-index: 1; overflow-x: hidden; height: fit-content;}
-.home-link{font-size: 30px; display: block; border-style: solid; border-color: lightgrey;}
+.home-link{font-size: 30px; display: block; border-style: solid; border-color:#232f3e;border-left-color:white;border-width: thin;}
 
 .welcome-text {margin-left: 280px;}
 
 .home-image{display: block; margin-left: auto; margin-right:auto; width:auto; height:47.5%;}
 
-#catalog-home-info {margin-left: 286px;}
+#catalog-home-info {margin-left: 286px; padding-bottom: 40px; min-height: 100%;}
 
-#catalog-sidebar{float: left; width: 280px; position: relative; height: fit-content; font-size: 30px; display: block; border-style: solid; border-color: lightgrey;}
-.sidebar-link{width: 100%; height: fit-content; display: block; border-bottom-style: solid; border-color: lightgrey;}
+#catalog-sidebar{float: left; width: 280px; position: relative; height: fit-content; font-size: 30px; display: block; border-style: solid; border-color: #232f3e; border-left-color:white; border-width: thin;}
+.sidebar-link{width: 100%; height: fit-content; display: block; border-bottom-style: solid; border-color: #232f3e; border-width: thin;}
 
 #item-grid{margin-left: 286px; display: flex; flex-wrap: wrap;}
 .item-tile{margin: 30px; width: 25%; border-color: gray; border-style: solid;}  /* Set background color to new color*/
