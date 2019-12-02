@@ -30,7 +30,7 @@ function loadItems(){
         itemCard.className = "item-tile";
         itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
           
-        itemGrid.appendChild(itemCard); // Maybe use a different append fucntion here
+        itemGrid.appendChild(itemCard); // Maybe use a different append function here
           // Scrapped array of items idea
       }
     };
@@ -38,6 +38,11 @@ function loadItems(){
       xhttp.send();
   });
 }
+
+
+
+
+
 
 function loadListing(){
   var url =  window.location.href;
@@ -67,7 +72,7 @@ function loadListing(){
       var itemListing = document.createElement("div");
       itemListing.setAttribute("id", "item-listing");
       //itemCard.className = "item-tile";
-      itemListing.innerHTML = "<div id='item-listing-photo'>" + "<img src='/public/plates.jpg'/></div>" + "<div id='item-listing-sidespecs'><ul><li>Made of Titanium Carbon Alloy</li><li>Durable under any stress, perfect for children</li><li>Beautiful cermic finish</li><li>Ornate crafted design on outer, upper lip of each plate</li><li>5th listing lol</li></ul></div>" + "<div id='item-listing-purchase'><p>" + itemPrice + "</p></div>" + "<div id='item-listing-description'> <h1>" + itemName + "</h1><p>Item Text Description here</p></div></div>";
+      itemListing.innerHTML = "<div id='item-listing-photo'><img src='/public/plates.jpg'/></div><div id='item-listing-info'><div id='item-listing-title'> <h1>" + itemName + "</h1></div><div id='item-listing-price'><h2>" + itemPrice + "</h2><div id='item-listing-description'><p>" + "Item Text Description here" + "</p></div><div id='item-listing-purchase'><div id='id-listing-price'></div><input type='text' id='orderQty' value='1'/><button onclick='submitQty()'>Order</button></div></div></div>";
         
       document.body.appendChild(itemListing); // Maybe use a different append fucntion here
         // Scrapped array of items idea
@@ -79,6 +84,34 @@ function loadListing(){
 }
 
 
+
+
+function loadOrders(){
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var orderRaw = this.responseText;      // Raw text file data
+      var hashIndex = orderRaw.indexOf("#");
+      var dollarIndex = orderRaw.indexOf("$");
+      var itemName = orderRaw.slice(0, hashIndex);
+      var itemQuantity = orderRaw.slice(++hashIndex, --dollarIndex);
+      var itemPrice = orderRaw.slice(dollarIndex + 2);
+      console.log(itemPrice);
+        
+      
+      var itemOrder = document.createElement("div");
+      var orderList = document.getElementById("orders-body")
+      itemOrder.setAttribute("class", "orders-single");
+      
+      itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/stock_hot.jpg" + "/><h2>" + itemName + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
+        
+      orderList.appendChild(itemOrder); 
+    }
+  };
+    xhttp.open("GET", "https://localhost:8080/orders/" + "adminorders.txt", false);   //Might need " at end of fileName here
+    xhttp.send();
+} 
 
 
 
