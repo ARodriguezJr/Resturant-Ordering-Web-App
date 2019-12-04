@@ -22,6 +22,13 @@ const pug = require('pug');
 var indexManager = require("./managers/index");
 var catalogManager = require("./managers/catalog");
 var accountManager = require("./managers/account");
+var aboutManager = require("./managers/about");
+var offersManager = require("./managers/offers");
+var reviewsManager = require("./managers/reviews");
+var careersManager = require("./managers/careers");
+var contactManager = require("./managers/contact");
+var helpManager = require("./managers/help");
+
 
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/node_modules", express.static(__dirname + "/js"));
@@ -31,6 +38,12 @@ app.use("/views", express.static(__dirname + "/views"));
 app.use("/", indexManager);
 app.use("/catalog", catalogManager);
 app.use("/account", accountManager);
+app.use("/about", aboutManager);
+app.use("/offers", offersManager);
+app.use("/reviews", reviewsManager);
+app.use("/careers", careersManager);
+app.use("/contact", contactManager);
+app.use("/help", helpManager);
 
 app.set("view engine", "pug");
 

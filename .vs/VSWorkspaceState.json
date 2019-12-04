@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\js",
     "\\managers",
-    "\\public",
     "\\views",
-    "\\views\\account",
-    "\\views\\catalog",
-    "\\views\\siteroot"
+    "\\views\\about",
+    "\\views\\careers",
+    "\\views\\contact",
+    "\\views\\help",
+    "\\views\\offers",
+    "\\views\\reviews"
   ],
-  "SelectedNode": "\\managers\\account.js",
+  "SelectedNode": "\\views\\base.pug",
   "PreviewInSolutionExplorer": false
 }
