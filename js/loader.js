@@ -11,6 +11,15 @@ function loadItems(){
   }else if(url == "https://localhost:3000/catalog/silverware"){
     folder = "silverware";
     var fileNames = ["steel_forks", "steel_knives"];
+  }else if(url == "https://localhost:3000/catalog/disposables"){
+    folder = "disposables";
+    var fileNames = ["gloves", "trashbags"];
+  }else if(url == "https://localhost:3000/catalog/office"){
+    folder = "office";
+    var fileNames = ["paper", "staples"];
+  }else if(url == "https://localhost:3000/catalog/kitchen"){
+    folder = "kitchen";
+    var fileNames = ["sauce_pan", "sautee_pan"];
   }else{
     var fileNames = ["failText.txt"]
   }
@@ -20,15 +29,16 @@ function loadItems(){
       if (this.readyState == 4 && this.status == 200) {
         var itemRaw = this.responseText;      // Raw text file data
         var dollarIndex = itemRaw.indexOf("$");
+        var hashIndex = itemRaw.indexOf("#");
         var itemName = itemRaw.slice(0, dollarIndex);
-        var itemPrice = itemRaw.slice(dollarIndex);
+        var itemPrice = itemRaw.slice(dollarIndex, hashIndex);
           
-        document.getElementById("demo").innerHTML = itemName;
+        //document.getElementById("demo").innerHTML = itemName;
         var itemGrid = document.getElementById("item-grid");
         var itemCard = document.createElement("a");
         itemCard.setAttribute("href", "/catalog/" + fileName);
         itemCard.className = "item-tile";
-        itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/plates.jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
+        itemCard.innerHTML = "<div class='item-tile-photo'>" + "<img src='/public/" + fileName + ".jpg'/>" +  "</div><div class='item-tile-description'>" + "<h1>" + itemName + "</h1><p>" + itemPrice + "</p></div>";
           
         itemGrid.appendChild(itemCard); // Maybe use a different append function here
           // Scrapped array of items idea
@@ -38,10 +48,6 @@ function loadItems(){
       xhttp.send();
   });
 }
-
-
-
-
 
 
 function loadListing(){
@@ -55,6 +61,30 @@ function loadListing(){
   }else if(url == "https://localhost:3000/catalog/dark_ceramic"){
     folder = "plates";
     var fileName = "dark_ceramic";
+  }else if(url == "https://localhost:3000/catalog/steel_forks"){
+    folder = "silverware";
+    var fileName = "steel_forks";
+  }else if(url == "https://localhost:3000/catalog/steel_knives"){
+    folder = "silverware";
+    var fileName = "steel_knives";
+  }else if(url == "https://localhost:3000/catalog/gloves"){
+    folder = "disposables";
+    var fileName = "gloves";
+  }else if(url == "https://localhost:3000/catalog/trashbags"){
+    folder = "disposables";
+    var fileName = "trashbags";
+  }else if(url == "https://localhost:3000/catalog/paper"){
+    folder = "office";
+    var fileName = "paper";
+  }else if(url == "https://localhost:3000/catalog/staples"){
+    folder = "office";
+    var fileName = "staples";
+  }else if(url == "https://localhost:3000/catalog/sauce_pan"){
+    folder = "kitchen";
+    var fileName = "sauce_pan";
+  }else if(url == "https://localhost:3000/catalog/sautee_pan"){
+    folder = "kitchen";
+    var fileName = "sautee_pan";
   }else{
     var fileName = "failtextfile"
   }
@@ -65,14 +95,16 @@ function loadListing(){
     if (this.readyState == 4 && this.status == 200) {
       var itemRaw = this.responseText;      // Raw text file data
       var dollarIndex = itemRaw.indexOf("$");
+      var hashIndex = itemRaw.indexOf("#");
       var itemName = itemRaw.slice(0, dollarIndex);
-      var itemPrice = itemRaw.slice(dollarIndex);
+      var itemPrice = itemRaw.slice(dollarIndex, hashIndex);
+      var itemDesc = itemRaw.slice(++hashIndex)
         
-      document.getElementById("demo").innerHTML = itemName;
+      //document.getElementById("demo").innerHTML = itemName;
       var itemListing = document.createElement("div");
       itemListing.setAttribute("id", "item-listing");
       //itemCard.className = "item-tile";
-      itemListing.innerHTML = "<div id='item-listing-photo'><img src='/public/plates.jpg'/></div><div id='item-listing-info'><div id='item-listing-title'> <h1>" + itemName + "</h1></div><div id='item-listing-price'><h2>" + itemPrice + "</h2><div id='item-listing-description'><p>" + "Item Text Description here" + "</p></div><div id='item-listing-purchase'><div id='id-listing-price'></div><input type='text' id='orderQty' value='1'/><button onclick='submitQty()'>Order</button></div></div></div>";
+      itemListing.innerHTML = "<div id='item-listing-photo'><img src='/public/" + fileName + ".jpg'/></div><div id='item-listing-info'><div id='item-listing-title'> <h1>" + itemName + "</h1></div><div id='item-listing-price'><h2>" + itemPrice + "</h2><div id='item-listing-description'><p>" + itemDesc + "</p></div><div id='item-listing-purchase'><div id='id-listing-price'></div><input type='text' id='orderQty' value='1'/><button onclick='submitQty()'>Order</button></div></div></div>";
         
       document.body.appendChild(itemListing); // Maybe use a different append fucntion here
         // Scrapped array of items idea
