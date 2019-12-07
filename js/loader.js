@@ -124,21 +124,45 @@ function loadOrders(){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var orderRaw = this.responseText;      // Raw text file data
-      var hashIndex = orderRaw.indexOf("#");
+      var ordersParsed = orderRaw.split("\n");
+      console.log(ordersParsed);
+      
+      // Prepare to append orders to shopping list
+      var orderList = document.getElementById("orders-body");
+      //var itemOrder = document.createElement("div");
+      //itemOrder.setAttribute("class", "orders-single");
+      for(p = 0; p < ordersParsed.length && ordersParsed[p] != ""; p++){
+        // Parse each line of order for item info
+        var singleItemOrder = ordersParsed[p].split(" ");
+        console.log(singleItemOrder);
+        var itemName = singleItemOrder[0];
+        console.log(itemName);
+        var itemQuantity = singleItemOrder[1];
+        var itemPrice = singleItemOrder[2];
+
+        // Create new div for new order
+        var itemOrder = document.createElement("div");
+        itemOrder.setAttribute("class", "orders-single");
+        itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/stock_hot.jpg" + "/><h2>" + itemName + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
+        
+        orderList.appendChild(itemOrder); 
+      }
+      /*var hashIndex = orderRaw.indexOf("#");
       var dollarIndex = orderRaw.indexOf("$");
       var itemName = orderRaw.slice(0, hashIndex);
       var itemQuantity = orderRaw.slice(++hashIndex, --dollarIndex);
-      var itemPrice = orderRaw.slice(dollarIndex + 2);
-      console.log(itemPrice);
+      var itemPrice = orderRaw.slice(dollarIndex + 2); */
+      //console.log(itemPrice);
         
       
-      var itemOrder = document.createElement("div");
-      var orderList = document.getElementById("orders-body")
+      /*var itemOrder = document.createElement("div");
+      var orderList = document.getElementById("orders-body");
       itemOrder.setAttribute("class", "orders-single");
       
       itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/stock_hot.jpg" + "/><h2>" + itemName + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
         
       orderList.appendChild(itemOrder); 
+      */
     }
   };
     xhttp.open("GET", "https://localhost:8080/orders/" + "adminorders.txt", false);   //Might need " at end of fileName here
