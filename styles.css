@@ -4,6 +4,12 @@ h1{color: black; font-size: 30px; font-family: 'Rubik', sans-serif;}
 img{width: 100%;}
 a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
 
+h2{font-size: 40px; font-weight: bold; text-align: center;}
+h3{font-size: 25px; text-decoration: underline;}
+p1{font-weight: bold;}
+.page-info {margin-left: 280px; margin-right: 280px;}
+.help-info{font-size: 20px; display: block;}
+
 .topbar{height: 80px; background-color: white; width: 100%;}
 .topbar h1{color: #232f3e;}
 .icon{float: left;}
