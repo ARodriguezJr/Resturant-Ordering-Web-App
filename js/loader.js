@@ -102,15 +102,16 @@ function loadListing(){
         
       //document.getElementById("demo").innerHTML = itemName;
       var itemListing = document.createElement("div");
+      var container = document.getElementById("item-listing-container")
       itemListing.setAttribute("id", "item-listing");
       //itemCard.className = "item-tile";
-      itemListing.innerHTML = "<div id='item-listing-photo'><img src='/public/" + fileName + ".jpg'/></div><div id='item-listing-info'><div id='item-listing-title'> <h1>" + itemName + "</h1></div><div id='item-listing-price'><h2>" + itemPrice + "</h2><div id='item-listing-description'><p>" + itemDesc + "</p></div><div id='item-listing-purchase'><div id='id-listing-price'></div><input type='text' id='orderQty' value='1'/><button onclick='submitQty()'>Order</button></div></div></div>";
+      itemListing.innerHTML = "<div id='item-listing-photo'><img src='/public/" + fileName + ".jpg'/></div><div id='item-listing-info'><div id='item-listing-title'> <h1>" + itemName + "</h1></div><div id='item-listing-price'><h1>" + itemPrice + "</h1><div id='item-listing-description'><p>" + itemDesc + "</p></div><div id='item-listing-purchase'><div id='id-listing-price'></div><input type='text' id='orderQty' value='1'/><button onclick='submitQty()'>Order</button></div></div></div>";
         
-      document.body.appendChild(itemListing); // Maybe use a different append fucntion here
+      container.appendChild(itemListing); // Maybe use a different append fucntion here
         // Scrapped array of items idea
     }
   };
-    xhttp.open("GET", "https://localhost:8080/static/" + folder + "/" + fileName + ".txt", false);   //Might need " at end of fileName here
+    xhttp.open("GET", "https://localhost:8080/static/" + folder + "/" + fileName + ".txt", true);   //Might need " at end of fileName here
     xhttp.send();
   
 }

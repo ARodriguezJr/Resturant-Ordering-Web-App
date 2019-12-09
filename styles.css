@@ -1,23 +1,24 @@
 html, body {height: 100%;min-height: 100%; margin: 0;padding: 0; border: 0;}
 body{background-color: white; margin: 0px;}
-h1{color: black; font-size: 30px; font-family: 'Rubik', sans-serif;}
+h1{color: black; font-size: 30px; font-family: 'Gupter', sans-serif;}
+h2{color: black; font-size: 30px; font-family: 'Gupter', sans-serif;}
+p{font-family: 'Gupter', sans-serif;}
 img{width: 100%;}
-a{color: black; text-decoration: none; font-family: 'Rubik', sans-serif;}
+a{color: black; text-decoration: none; font-family: 'Gupter', sans-serif;}
 
 h2{font-size: 40px; font-weight: bold; text-align: center;}
 h3{font-size: 25px; text-decoration: underline;}
-p1{font-weight: bold;}
 .page-info {margin-left: 280px; margin-right: 280px;}
 .help-info{font-size: 20px; display: block;}
 
-.topbar{height: 80px; background-color: white; width: 100%;}
-.topbar h1{color: #232f3e;}
+.topbar{height: 80px; background-color: #232f3e; width: 100%;}
+.topbar h1{color: palegoldenrod;}
 .icon{float: left;}
 
 .login{float: right;}
 .login-form {display: block;}
 
-.footer {position:relative ; height: 55px; left: 0; bottom: 0; width: 100%; padding: 5px; background-color: #232f3e; }
+.footer {position: relative; height: 55px; left: 0; bottom: 0; width: 100%; padding: 5px; background-color: #232f3e; }
 .foot-link{justify-content: space-evenly; color:white;  float: left; display: block; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 15px;}
 .foot-info{font-size: 15px; color: white; float: right; display: block; text-align: center; padding: 14px 16px; text-decoration: none; justify-content:space-evenly;}
 
@@ -29,7 +30,8 @@ p1{font-weight: bold;}
 #contact-tab{display: inline-block; margin-left: 30; margin-right: 30;}
 p{color: black; font-family: 'Rubik', sans-serif;}
 
-#home-sidebar{width: 280px; position: fixed; z-index: 1; overflow-x: hidden; height: fit-content;}
+/* Previously fixed */
+#home-sidebar{width: 280px; position: absolute; z-index: 1; overflow-x: hidden; height: fit-content;} 
 .home-link{font-size: 30px; display: block; border-style: solid; border-color:#232f3e;border-left-color:white;border-width: thin;}
 
 .welcome-text {margin-left: 280px;}
@@ -49,18 +51,21 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 /***********************************************************************
 ******************************* MY ACCOUNT *****************************
 ************************************************************************/
-.account-info {width: 450px; height: fit-content; margin: auto; border-style: solid; border-width: 2px;}
+.account-info {width: 335px; height: fit-content; margin: auto; border-style: solid; border-width: 2px; margin-top: 25px;}
 .account-info .header {float: left;  width: 100%; border-bottom-style: solid; border-width: 2px;}
 
 #orders{width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
+#orders-header{border-bottom-style: inherit; border-bottom-color: #232f3e;}
 #orders-body{display: flex; flex-direction: column;}
 .orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}
 .orders-item{display: inline-flex; align-items: baseline; width: 400px;}
 .orders-image{width: 30px; height: 30px;}
+#submit-final-order{text-align: center; height: 50;}
+#final-order-button{background-color: palegoldenrod;}
 
-
+#item-listing-container{width: 100%; height: 50%; margin-bottom: 200px;}
 #item-listing{margin-left: 286px;}
 #item-listing-photo{float: left; height: fit-content; width: 50%; position: relative;}
 
 #item-listing-info{float: right; width: 50%;}
-#item-listing-description{position: relative; width: 300;}
+#item-listing-description{position: relative; width: 100%;}
