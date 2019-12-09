@@ -46,7 +46,7 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 .account-info {width: 450px; height: fit-content; margin: auto; border-style: solid; border-width: 2px;}
 .account-info .header {float: left;  width: 100%; border-bottom-style: solid; border-width: 2px;}
 
-#orders{width: 825px; margin-left: auto; margin-right: auto; margin-top: 25px; border-style: outset;}
+#orders{width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
 #orders-body{display: flex; flex-direction: column;}
 .orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}
 .orders-item{display: inline-flex; align-items: baseline; width: 400px;}

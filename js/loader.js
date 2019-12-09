@@ -125,7 +125,7 @@ function loadOrders(){
     if (this.readyState == 4 && this.status == 200) {
       var orderRaw = this.responseText;      // Raw text file data
       var ordersParsed = orderRaw.split("\n");
-      console.log(ordersParsed);
+      //console.log(ordersParsed);
       
       // Prepare to append orders to shopping list
       var orderList = document.getElementById("orders-body");
@@ -137,13 +137,24 @@ function loadOrders(){
         console.log(singleItemOrder);
         var itemName = singleItemOrder[0];
         console.log(itemName);
+
+        var underlineInd = itemName.search("_");
+        if(underlineInd != -1){  // If name has _ in the name
+          // Change first letters to uppercase and remove _
+          var itemNameCap = itemName.charAt(0).toUpperCase() + itemName.slice(1, underlineInd) + " " + itemName.charAt(++underlineInd).toUpperCase() + itemName.slice(++underlineInd);
+        }else{
+          var itemNameCap = itemName.charAt(0).toUpperCase() + itemName.slice(1);
+        }
+        console.log("CAP: " + itemNameCap);
+        //itemName.split("_");
+
         var itemQuantity = singleItemOrder[1];
         var itemPrice = singleItemOrder[2];
 
         // Create new div for new order
         var itemOrder = document.createElement("div");
         itemOrder.setAttribute("class", "orders-single");
-        itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/stock_hot.jpg" + "/><h2>" + itemName + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
+        itemOrder.innerHTML = "<div class='orders-item'><img class='orders-image' src=" + "/public/" + itemName + ".jpg" + "><h2>" + itemNameCap + "</h2></div><div class='orders-quantity'><p>Quantity: " + itemQuantity + "</p></div><div class='orders-price'><h2>$" + itemPrice * itemQuantity + "</h2></div>";
         
         orderList.appendChild(itemOrder); 
       }

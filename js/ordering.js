@@ -35,3 +35,7 @@ function submitQty(){
     // add order to text file of users
     //change innerHTML of ordering div to say order added
 }
+
+function submitFinalOrder(){
+    //false.writeFile('submittedOrders/adminFinalOrder.txt', )
+}
