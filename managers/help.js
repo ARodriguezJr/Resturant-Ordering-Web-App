@@ -6,11 +6,11 @@ router.get("/help-home", (req, res) => {
 });
 
 router.get("/terms-of-use", (req, res) => {
-    res.render("help/help-home", { title: "Terms of Use" });
+    res.render("help/terms", { title: "Terms of Use" });
 });
 
 router.get("/privacy", (req, res) => {
-    res.render("help/help-home", { title: "Privacy" });
+    res.render("help/privacy", { title: "Privacy" });
 });
 
 module.exports = router;
