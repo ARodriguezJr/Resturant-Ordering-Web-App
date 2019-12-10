@@ -17,18 +17,18 @@ html
                     h1 ResturSHOP
                 div(class="login")
                     form(name="loginForm", id="loginForm")
-                        input(type="text", name="username", id="username", class="login-form")
-                        input(type="password", name="login", id="password", class="login-form")
+                        input(type="text", name="username", id="username", value="Username" class="login-form")
+                        input(type="password", name="login", id="password", value="Password" class="login-form")
                         button(type="button", onClick="submitLogin()") Login
         block navigation
             div(class="navbar")
-                a(id="home-tab", href="/")
+                a(id="home-tab", class="nav-tab", href="/")
                     p Home
-                a(id="catalog-tab", href="/catalog/catalog-home")
+                a(id="catalog-tab", class="nav-tab", href="/catalog/catalog-home")
                     p Catalog
-                a(id="contact-tab", href="/contact/contact-home")
+                a(id="contact-tab", class="nav-tab", href="/contact/contact-home")
                     p Contact Us
-                a(id="My Account", href="/account/myAccount")
+                a(id="My Account", class="nav-tab", href="/account/myAccount")
                     p My Account
             b
         block sidebar

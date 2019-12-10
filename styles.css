@@ -6,8 +6,8 @@ p{font-family: 'Gupter', sans-serif;}
 img{width: 100%;}
 a{color: black; text-decoration: none; font-family: 'Gupter', sans-serif;}
 
-h2{font-size: 40px; font-weight: bold; text-align: center;}
-h3{font-size: 25px; text-decoration: underline;}
+h2{font-size: 40px; font-weight: bold; text-align: center;font-family: 'Gupter', sans-serif}
+h3{font-size: 25px; text-decoration: underline;font-family: 'Gupter', sans-serif}
 .page-info {margin-left: 280px; margin-right: 280px;}
 .help-info{font-size: 20px; display: block;}
 
@@ -17,24 +17,26 @@ h3{font-size: 25px; text-decoration: underline;}
 
 .login{float: right;}
 .login-form {display: block;}
+#loginform{margin: 5px;}
 
 .footer {position: relative; height: 55px; left: 0; bottom: 0; width: 100%; padding: 5px; background-color: #232f3e; }
 .foot-link{justify-content: space-evenly; color:white;  float: left; display: block; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 15px;}
 .foot-info{font-size: 15px; color: white; float: right; display: block; text-align: center; padding: 14px 16px; text-decoration: none; justify-content:space-evenly;}
 
 .navbar{position: relative; height: 50px; background-color: #232f3e; display: flex; justify-content: space-evenly;}
+.nav-tab{width: 25%; height: 44px; text-align: center; border-style: solid; border-color: gray;}
 .navbar p{color: white;}
 
-#home-tab{display: inline-block; margin-left: 30; margin-right: 30;}
-#catalog-tab{display: inline-block; margin-left: 30; margin-right: 30;}
-#contact-tab{display: inline-block; margin-left: 30; margin-right: 30;}
+#home-tab{display: inline-block;}
+#catalog-tab{display: inline-block;}
+#contact-tab{display: inline-block;}
 p{color: black; font-family: 'Rubik', sans-serif;}
 
 /* Previously fixed */
 #home-sidebar{width: 280px; position: absolute; z-index: 1; overflow-x: hidden; height: fit-content;} 
 .home-link{font-size: 30px; display: block; border-style: solid; border-color:#232f3e;border-left-color:white;border-width: thin;}
 
-.welcome-text {margin-left: 280px;}
+.welcome-text {margin-left: 280px; margin-top: 30px;}
 
 .home-image{display: block; margin-left: auto; margin-right:auto; width:auto; height:47.5%;}
 
@@ -60,8 +62,18 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 .orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}
 .orders-item{display: inline-flex; align-items: baseline; width: 400px;}
 .orders-image{width: 30px; height: 30px;}
-#submit-final-order{text-align: center; height: 50;}
-#final-order-button{background-color: palegoldenrod;}
+#submit-final-order{height: 50; display: flex; justify-content: space-evenly;}
+#final-order-button{background-color: palegoldenrod; height: 45px;}
+#clear-order-button{background-color: palegoldenrod; height: 45px;}
+
+#previous-orders{width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
+#previous-orders-header{border-bottom-style: inherit; border-bottom-color: #232f3e;}
+#previous-orders-body{display: flex; flex-direction: column;}
+.previous-orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}
+.previous-orders-item{display: inline-flex; align-items: baseline; width: 400px;}
+.previous-orders-image{width: 30px; height: 30px;}
+#cancel-order{display: flex; justify-content: center; height: 50px;}
+#cancel-order-button{background-color: palegoldenrod; height: 45px;}
 
 #item-listing-container{width: 100%; height: 50%; margin-bottom: 200px;}
 #item-listing{margin-left: 286px;}

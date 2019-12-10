@@ -38,4 +38,52 @@ function submitQty(){
 
 function submitFinalOrder(){
     //false.writeFile('submittedOrders/adminFinalOrder.txt', )
+    var http = new XMLHttpRequest();
+    http.open("POST", "https://localhost:8080/incomingFinalOrder", false);
+    
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            alert(http.responseText);
+        }
+    }
+
+    http.send();
+
+    window.location.replace("https://localhost:3000/account/myAccount");
+}
+
+function submitClearOrder(){
+    var http = new XMLHttpRequest();
+    http.open("POST", "https://localhost:8080/incomingClearOrder", false);
+    
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            alert(http.responseText);
+        }
+    }
+
+    http.send();
+
+    window.location.replace("https://localhost:3000/account/myAccount");
+}
+
+function submitCancelOrder(){
+    var http = new XMLHttpRequest();
+    http.open("POST", "https://localhost:8080/incomingCancelOrder", false);
+    
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            alert(http.responseText);
+        }
+    }
+
+    http.send();
+
+    window.location.replace("https://localhost:3000/account/myAccount");
 }

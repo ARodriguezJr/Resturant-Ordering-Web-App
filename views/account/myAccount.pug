@@ -1,7 +1,7 @@
 extends ../base
 
 block content
-    body(onload='loadOrders()')
+    body(onload='loadAccount()')
     div(class="account-info")
         div(class="header") Your Account
         div(id="main-info")
@@ -10,11 +10,20 @@ block content
             div(class="profile-name")
                 p Alberto Rodriguez
         div(id="extra-info")
-            p Associated Company: Super Mega Food Place
+            p Associated Company: Super Mega Food Palace
             p Membership: Premium
     div(id="orders")
         div(id="orders-header")
             h1 Orders
         div(id="orders-body")
         div(id="submit-final-order")
+            button(id="clear-order-button", onclick="submitClearOrder()") Clear Cart
             button(id="final-order-button", onclick="submitFinalOrder()") Submit Order
+            //- Use event listeners instead
+    
+    div(id="previous-orders")
+        div(id="previous-orders-header")
+            h1 Previous Orders
+        div(id="previous-orders-body")
+        div(id="cancel-order")
+            button(id="cancel-order-button", onclick="submitCancelOrder()") Cancel Order
