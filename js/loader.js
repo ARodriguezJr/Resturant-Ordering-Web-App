@@ -7,19 +7,19 @@ function loadItems(){
 
   if(url == "https://localhost:3000/catalog/dishes"){
     folder = "plates";
-    var fileNames = ["ceramic", "dark_ceramic"];
+    var fileNames = ["ceramic", "dark_ceramic", "paper_bowls", "paper_plates"];
   }else if(url == "https://localhost:3000/catalog/silverware"){
     folder = "silverware";
-    var fileNames = ["steel_forks", "steel_knives"];
+    var fileNames = ["steel_forks", "steel_knives", "steel_spoons", "plastic_forks", "plastic_spoons", "plastic_knives"];
   }else if(url == "https://localhost:3000/catalog/disposables"){
     folder = "disposables";
-    var fileNames = ["gloves", "trashbags"];
+    var fileNames = ["gloves", "trashbags", "clorox_spray", "paper_towels"];
   }else if(url == "https://localhost:3000/catalog/office"){
     folder = "office";
-    var fileNames = ["paper", "staples"];
+    var fileNames = ["paper", "staples", "ballpoint_pens"];
   }else if(url == "https://localhost:3000/catalog/kitchen"){
     folder = "kitchen";
-    var fileNames = ["sauce_pan", "sautee_pan"];
+    var fileNames = ["sauce_pan", "sautee_pan", "strainer"];
   }else{
     var fileNames = ["failText.txt"]
   }
@@ -61,30 +61,60 @@ function loadListing(){
   }else if(url == "https://localhost:3000/catalog/dark_ceramic"){
     folder = "plates";
     var fileName = "dark_ceramic";
+  }else if(url == "https://localhost:3000/catalog/paper_plates"){
+    folder = "plates";
+    var fileName = "papeer_plates";
+  }else if(url == "https://localhost:3000/catalog/paper_bowls"){
+    folder = "plates";
+    var fileName = "paper_bowls";
   }else if(url == "https://localhost:3000/catalog/steel_forks"){
     folder = "silverware";
     var fileName = "steel_forks";
   }else if(url == "https://localhost:3000/catalog/steel_knives"){
     folder = "silverware";
     var fileName = "steel_knives";
+  }else if(url == "https://localhost:3000/catalog/steel_spoons"){
+    folder = "silverware";
+    var fileName = "steel_spoons";
+  }else if(url == "https://localhost:3000/catalog/plastic_forks"){
+    folder = "silverware";
+    var fileName = "plastic_forks";
+  }else if(url == "https://localhost:3000/catalog/plastic_spoons"){
+    folder = "silverware";
+    var fileName = "plastic_spoons";
+  }else if(url == "https://localhost:3000/catalog/plastic_knives"){
+    folder = "silverware";
+    var fileName = "plastic_knives";
   }else if(url == "https://localhost:3000/catalog/gloves"){
     folder = "disposables";
     var fileName = "gloves";
   }else if(url == "https://localhost:3000/catalog/trashbags"){
     folder = "disposables";
     var fileName = "trashbags";
+  }else if(url == "https://localhost:3000/catalog/clorox_spray"){
+    folder = "disposables";
+    var fileName = "clorox_spray";
+  }else if(url == "https://localhost:3000/catalog/paper_towels"){
+    folder = "disposables";
+    var fileName = "paper_towels";
   }else if(url == "https://localhost:3000/catalog/paper"){
     folder = "office";
     var fileName = "paper";
   }else if(url == "https://localhost:3000/catalog/staples"){
     folder = "office";
     var fileName = "staples";
+  }else if(url == "https://localhost:3000/catalog/ballpoint_pens"){
+    folder = "office";
+    var fileName = "ballpoint_pens";
   }else if(url == "https://localhost:3000/catalog/sauce_pan"){
     folder = "kitchen";
     var fileName = "sauce_pan";
   }else if(url == "https://localhost:3000/catalog/sautee_pan"){
     folder = "kitchen";
     var fileName = "sautee_pan";
+  }else if(url == "https://localhost:3000/catalog/strainer"){
+    folder = "kitchen";
+    var fileName = "strainer";
   }else{
     var fileName = "failtextfile"
   }
