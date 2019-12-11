@@ -1,5 +1,5 @@
 html, body {height: 100%;min-height: 100%; margin: 0;padding: 0; border: 0;}
-body{background-color: white; margin: 0px;}
+body{background-color: #eeeeee; margin: 0px;}
 h1{color: black; font-size: 30px; font-family: 'Gupter', sans-serif;}
 h2{color: black; font-size: 30px; font-family: 'Gupter', sans-serif;}
 p{font-family: 'Gupter', sans-serif;}
@@ -12,7 +12,7 @@ h3{font-size: 25px; text-decoration: underline;font-family: 'Gupter', sans-serif
 .help-info{font-size: 20px; display: block;}
 
 .topbar{height: 80px; background-color: #232f3e; width: 100%;}
-.topbar h1{color: palegoldenrod;}
+.topbar h1{margin-left: 20px; color: palegoldenrod;}
 .icon{float: left;}
 
 .login{float: right;}
@@ -46,17 +46,17 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 .sidebar-link{width: 100%; height: fit-content; display: block; border-bottom-style: solid; border-color: #232f3e; border-width: thin;}
 
 #item-grid{margin-left: 286px; display: flex; flex-wrap: wrap;}
-.item-tile{margin: 30px; width: 25%; border-color: gray; border-style: solid;}  /* Set background color to new color*/
+.item-tile{background-color: white; margin: 30px; width: 25%; border-color: gray; border-style: solid;}  /* Set background color to new color*/
 
 
 
 /***********************************************************************
 ******************************* MY ACCOUNT *****************************
 ************************************************************************/
-.account-info {width: 335px; height: fit-content; margin: auto; border-style: solid; border-width: 2px; margin-top: 25px;}
+.account-info {background-color: white; background-color: white; width: 335px; height: fit-content; margin: auto; border-style: solid; border-width: 2px; margin-top: 25px;}
 .account-info .header {float: left;  width: 100%; border-bottom-style: solid; border-width: 2px;}
 
-#orders{width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
+#orders{background-color: white; width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
 #orders-header{border-bottom-style: inherit; border-bottom-color: #232f3e;}
 #orders-body{display: flex; flex-direction: column;}
 .orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}
@@ -66,7 +66,7 @@ p{color: black; font-family: 'Rubik', sans-serif;}
 #final-order-button{background-color: palegoldenrod; height: 45px;}
 #clear-order-button{background-color: palegoldenrod; height: 45px;}
 
-#previous-orders{width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
+#previous-orders{background-color: white; width: 825px; margin-left: auto; margin-right: auto; margin-bottom: 75px; margin-top: 25px; border-style: outset;}
 #previous-orders-header{border-bottom-style: inherit; border-bottom-color: #232f3e;}
 #previous-orders-body{display: flex; flex-direction: column;}
 .previous-orders-single{display: inline-flex; align-items: baseline; justify-content: space-around;}

@@ -48,19 +48,6 @@ app.use("/help", helpManager);
 app.set("view engine", "pug");
 
 
-
-//app.use(express.static(__dirname + '/static'));
-//app.set("views", path.join(__dirname, "views"));
-//app.use(express.static((__dirname, 'public')));
-
-/*app.get('/', function (req, res) {
-  res.render("index.html", {title: "Home"});
-})
-*/
-/*io.on('connection', function(socket){
-  console.log('a user connected');
-});*/
-
 app.get('/', function (req, res) {
   res.render('siteroot/index', {title: 'Homepage'});
 }); 
